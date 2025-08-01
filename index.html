@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Baskets of Hope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HOME PAGE -->
+  <section id="home" class="active">
+    <div class="container">
+      <img src="assets/hope_icon.png" alt="Baskets of Hope" class="logo-img">
+      <h1>Baskets of Hope</h1>
+      <p class="tagline">Together, we can bring hope. One basket at a time.</p>
+      <div class="btn-group">
+        <button id="donee-btn" class="main-btn">Build a Basket</button>
+        <button id="donor-btn" class="main-btn">Donate a Basket</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONOR / DONATE PAGE -->
+  <section id="donor" class="hidden">
+    <div class="container">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>Donate a Basket</h2>
+      <div class="ai-search-bar">
+        <input id="ai-search-input" type="text" placeholder="Ask AI: What basket is most needed?">
+        <button id="ai-search-btn">Ask</button>
+      </div>
+      <div id="baskets-list" class="baskets"></div>
+      <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+          <span id="close-modal" class="close">&times;</span>
+          <h3 id="thank-you-msg"></h3>
+          <p id="ai-suggestion-msg"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONEE / BUILD PAGE -->
+  <section id="donee" class="hidden">
+    <div class="container">
+      <button class="back-btn" onclick="navigate('home')">← Back</button>
+      <h2>Build a Basket</h2>
+      <div id="customize-section">
+        <p>Select items from any category below to create your own basket:</p>
+        <div id="categories-container"></div>
+        <button id="submit-donee" class="main-btn">Request Basket</button>
+      </div>
+      <div id="donee-confirmation" class="hidden">
+        <h3>Thank you for your request!</h3>
+        <p id="donee-ai-msg"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="user-stories">
+      <h4>User Stories</h4>
+      <ul>
+        <li>“As a donator, I want to view the most popular necessities before sponsoring what basket to donate. So that I can reduce the amount of people who need that certain basket.”</li>
+        <li>“As a user, I want to use AI to help me discover what different necessities from the provided categories I need for my basket. So I can request them quickly and easily.”</li>
+      </ul>
+    </div>
+    <p>&copy; 2025 Baskets of Hope</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
